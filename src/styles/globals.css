@@ -1,0 +1,572 @@
+/* ── Fonts via next/font CSS variables ── */
+.loader-brand, .loader-counter, .digit-col, .loader-pct,
+.hero-brand-txt, .footer-brand {
+  font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;
+}
+
+.loader-year, .loader-col, .tagline, .register-label,
+.email-field input, .hero-season, .scroll-cue span,
+.footer-copy {
+  font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cream: #ffffff;
+  --dark:  #000000;
+  --ink:   #000000;
+  --stone: #666666;
+  --bone:  #bbbbbb;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  overflow: hidden;
+}
+
+body.ready {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ── Grain ── */
+.grain {
+  position: fixed;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.03;
+  animation: grift 0.65s steps(1) infinite;
+}
+
+@keyframes grift {
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(-3px, 2px); }
+  40%  { transform: translate(2px, -3px); }
+  60%  { transform: translate(-2px, -1px); }
+  80%  { transform: translate(3px, 1px); }
+  100% { transform: translate(0, 0); }
+}
+
+
+
+/* ══════════════════════════════════════
+   LOADER
+══════════════════════════════════════ */
+.loader {
+  position: fixed;
+  inset: 0;
+  background: var(--cream);
+  z-index: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loader-brand {
+  position: absolute;
+  top: clamp(24px, 3.8vh, 44px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(11px, 1vw, 13px);
+  font-weight: 300;
+  letter-spacing: 0.58em;
+  text-transform: uppercase;
+  color: var(--ink);
+  white-space: nowrap;
+  opacity: 0;
+}
+
+.loader-year {
+  position: absolute;
+  top: clamp(26px, 4vh, 46px);
+  left: clamp(28px, 4.5vw, 56px);
+  font-size: clamp(10px, 0.9vw, 12px);
+  font-weight: 300;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--stone);
+  opacity: 0;
+}
+
+.loader-col {
+  position: absolute;
+  top: clamp(26px, 4vh, 46px);
+  right: clamp(28px, 4.5vw, 56px);
+  font-size: clamp(10px, 0.9vw, 12px);
+  font-weight: 300;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--stone);
+  opacity: 0;
+}
+
+.loader-counter {
+  position: absolute;
+  bottom: clamp(22px, 3.6vh, 42px);
+  left: clamp(28px, 4.5vw, 56px);
+  display: flex;
+  align-items: baseline;
+  opacity: 0;
+  line-height: 1;
+}
+
+.digit-col {
+  font-size: clamp(72px, 10vw, 136px);
+  font-weight: 300;
+  color: var(--ink);
+  letter-spacing: -0.04em;
+  height: 1em;
+  overflow: hidden;
+}
+
+.digit-strip {
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+
+.digit-strip span {
+  display: block;
+  height: 1em;
+  line-height: 1;
+}
+
+.loader-pct {
+  font-size: clamp(14px, 1.3vw, 19px);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: var(--stone);
+  margin-left: 5px;
+  align-self: flex-end;
+  padding-bottom: 0.1em;
+}
+
+.rule {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(25, 25, 23, 0.09);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.rule-top    { top: calc(clamp(24px, 3.8vh, 44px) + 30px); }
+.rule-bottom { bottom: calc(clamp(22px, 3.6vh, 42px) + 30px); }
+
+/* ── Logo ── */
+.logo-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -54%);
+  width: clamp(140px, 15vw, 240px);
+  height: clamp(140px, 15vw, 240px);
+  opacity: 0;
+  z-index: 4;
+}
+
+.logo-wrap svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.logo-stroke {
+  fill: none;
+  stroke: var(--ink);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.logo-fill {
+  fill: var(--ink);
+  opacity: 0;
+}
+
+/* ── Cards ── */
+.card-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 2;
+  will-change: width, height, border-radius, transform, opacity;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.1);
+  will-change: transform;
+}
+
+.card-a {
+  transform: translate(-90%, -60%) rotate(-4deg);
+  width: min(280px, 40vw);
+  height: min(380px, 50vh);
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.card-b {
+  transform: translate(10%, -85%) rotate(3deg);
+  width: min(180px, 30vw);
+  height: min(240px, 35vh);
+  border-radius: 3px;
+  z-index: 3;
+}
+
+.card-c {
+  transform: translate(-30%, 10%) rotate(-2deg);
+  width: min(220px, 35vw);
+  height: min(280px, 40vh);
+  border-radius: 4px;
+  z-index: 4;
+}
+
+.card-d {
+  transform: translate(-45%, -45%) rotate(1deg);
+  width: min(320px, 45vw);
+  height: min(440px, 60vh);
+  border-radius: 5px;
+  z-index: 5;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+}
+
+.card-d img {
+  transform: scale(1.15); /* Slightly more scale for the final push effect */
+}
+
+/* ══════════════════════════════════════
+   VIDEO HERO
+══════════════════════════════════════ */
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden;
+  opacity: 0;
+  background: var(--dark);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 40vh;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  transform: scale(1.1);
+  will-change: transform;
+  filter: brightness(0.72) contrast(1.06) saturate(0.65);
+}
+
+.hero-bar-top,
+.hero-bar-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background: var(--dark);
+}
+
+.hero-bar-top    { top: 0; }
+.hero-bar-bottom { bottom: 0; }
+
+.hero-id {
+  position: absolute;
+  bottom: clamp(28px, 4.2vh, 48px);
+  left: clamp(28px, 4.5vw, 56px);
+  z-index: 10;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hero-brand-txt {
+  font-size: clamp(12px, 1.1vw, 15px);
+  font-weight: 400;
+  letter-spacing: 0.55em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-season {
+  font-size: clamp(11px, 0.9vw, 13px);
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: clamp(28px, 4.2vh, 48px);
+  right: clamp(28px, 4.5vw, 56px);
+  z-index: 10;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.scroll-cue span {
+  font-size: clamp(10px, 0.8vw, 11px);
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.scroll-line {
+  width: 1px;
+  height: 52px;
+  background: linear-gradient(to bottom, rgba(244, 242, 238, 0.4), transparent);
+  animation: spulse 2.4s ease-in-out infinite;
+}
+
+@keyframes spulse {
+  0%, 100% { opacity: 0.25; transform: scaleY(1); }
+  50%       { opacity: 0.8;  transform: scaleY(1.1); }
+}
+
+/* ══════════════════════════════════════
+   LANDING
+══════════════════════════════════════ */
+.landing {
+  background: var(--white);
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0; /* Prevents FOUC before GSAP fades it in */
+  will-change: opacity;
+}
+
+.tagline-block {
+  padding: clamp(10px, 3.5vh, 40px) clamp(20px, 4vw, 60px);
+  text-align: center;
+  border-bottom: 1px solid rgba(25, 25, 23, 0.07);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: opacity, transform;
+}
+
+.tagline {
+  font-size: clamp(16px, 1.6vw, 22px);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  line-height: 2.2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .tagline {
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    line-height: 1.8;
+  }
+}
+
+.register-block {
+  padding: clamp(10px, 2vh, 32px) clamp(20px, 4vw, 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(10px, 2vh, 20px);
+  flex: 1.5;
+  justify-content: center;
+}
+
+.mini-logo {
+  width: 80px;
+  height: 80px;
+  opacity: 1;
+  transition: transform 0.4s ease;
+  animation: slowSpin 20s linear infinite;
+}
+
+@keyframes slowSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.mini-logo:hover {
+  animation-play-state: paused;
+  transform: scale(1.1);
+}
+
+.mini-logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.mini-logo .logo-stroke { stroke: var(--ink); stroke-width: 4; }
+.mini-logo .logo-fill   { fill: var(--ink); opacity: 1; }
+
+.register-label {
+  font-size: clamp(11px, 0.95vw, 13px);
+  font-weight: 400;
+  letter-spacing: 0.55em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.email-field {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(25, 25, 23, 0.16);
+  width: min(310px, 84vw);
+  transition: border-color 0.3s;
+}
+
+.email-field:focus-within {
+  border-color: rgba(25, 25, 23, 0.5);
+}
+
+.email-field input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: clamp(13px, 1.2vw, 15px);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--ink);
+  padding: 13px 16px;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+
+.email-field input::placeholder {
+  color: var(--stone);
+  letter-spacing: 0.22em;
+  font-size: clamp(10px, 0.9vw, 12px);
+}
+
+@media (max-width: 768px) {
+  .email-field {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+.email-field button {
+  background: none;
+  border: none;
+  cursor: none;
+  padding: 13px 16px;
+  color: var(--stone);
+  font-size: 17px;
+  line-height: 1;
+  transition: color 0.3s, transform 0.25s;
+}
+
+.email-field button:hover {
+  color: var(--ink);
+  transform: translateX(3px);
+}
+
+.social-row {
+  display: flex;
+  gap: clamp(18px, 2.8vw, 30px);
+  align-items: center;
+}
+
+.social-link {
+  color: var(--ink);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-link:hover { 
+  transform: translateY(-2px); 
+}
+
+.social-link svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
+
+.footer {
+  padding: clamp(10px, 1.5vh, 20px) clamp(20px, 4vw, 60px);
+  border-top: 1px solid rgba(25, 25, 23, 0.07);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+.footer-brand {
+  font-size: clamp(12px, 1vw, 14px);
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.footer-copy {
+  font-size: clamp(11px, 0.85vw, 12px);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--stone);
+}
