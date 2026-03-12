@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Cormorant_Garamond } from 'next/font/google'
+import FaviconAnimator from '@/components/FaviconAnimator'
 import '../styles/globals.css'
 
 const playfair = Playfair_Display({
@@ -21,6 +22,10 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: 'Mixed Signals',
   description: 'A menswear narrative guided by a curiosity to intertwine nuanced perspectives with an essence of familiarity.',
+  icons: {
+    icon: '/favicon-white.png',
+    apple: '/favicon-white.png',
+  },
 }
 
 export default function RootLayout({
@@ -35,7 +40,10 @@ export default function RootLayout({
         <link rel="preload" href="/preview-transparent.png" as="image" />
         <link rel="preload" href="/IMG-20260309-WA0006-opt.jpg" as="image" />
       </head>
-      <body>{children}</body>
+      <body>
+        <FaviconAnimator />
+        {children}
+      </body>
     </html>
   )
 }

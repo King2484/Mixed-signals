@@ -428,12 +428,40 @@ body.ready {
   height: 80px;
   opacity: 1;
   transition: transform 0.4s ease;
-  animation: slowSpin 20s linear infinite;
+  animation: spinPulse 8s ease-in-out infinite;
 }
 
-@keyframes slowSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes spinPulse {
+  0% { transform: rotate(0deg) scale(1); opacity: 1; }
+  50% { transform: rotate(180deg) scale(1.1); opacity: 0.9; }
+  100% { transform: rotate(360deg) scale(1); opacity: 1; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
+@keyframes morphSuccess {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.email-field.shake {
+  animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+  border-color: #ff4444 !important;
+}
+
+.email-field.success {
+  border-color: transparent !important;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.status-message.success {
+  color: var(--ink) !important;
+  text-transform: uppercase;
 }
 
 .mini-logo:hover {
@@ -462,7 +490,6 @@ body.ready {
   align-items: center;
   border: 1px solid rgba(25, 25, 23, 0.16);
   width: min(310px, 84vw);
-  transition: border-color 0.3s;
 }
 
 .email-field:focus-within {
@@ -504,7 +531,6 @@ body.ready {
   color: var(--stone);
   font-size: 17px;
   line-height: 1;
-  transition: color 0.3s, transform 0.25s;
 }
 
 .email-field button:hover {
