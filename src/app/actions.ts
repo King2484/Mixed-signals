@@ -16,6 +16,11 @@ export async function registerInterest(formData: FormData) {
     console.log(`[Registration] Starting flow for: ${email}`)
 
     // 1. Save to Supabase (Priority #1)
+    if (!supabase) {
+      console.error('[Registration] Supabase client is not initialized. Check your environment variables.')
+      return { error: 'Service is temporarily unavailable (Missing Database Config).' }
+    }
+
     const { error: supabaseError } = await supabase
       .from('interest_registrations')
       .insert([{ email }])
