@@ -18,7 +18,7 @@ export async function registerInterest(formData: FormData) {
     // 1. Save to Supabase (Priority #1)
     if (!supabase) {
       console.error('[Registration] Supabase client is not initialized. Check your environment variables.')
-      return { error: 'Service is temporarily unavailable (Missing Database Config).' }
+      return { error: 'Action Required: Add Supabase & Resend keys to Vercel Environment Variables.' }
     }
 
     const { error: supabaseError } = await supabase
@@ -82,14 +82,58 @@ export async function registerInterest(formData: FormData) {
         to: email,
         subject: 'Thank you for your interest | Mixed Signals',
         html: `
-          <div style="font-family: serif; color: #000; padding: 20px; max-width: 600px; margin: 0 auto;">
-            <h1 style="font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 10px;">Mixed Signals</h1>
-            <p style="font-size: 16px; line-height: 1.6; margin-top: 20px;">Thank you for registering your interest.</p>
-            <p style="font-size: 16px; line-height: 1.6; font-style: italic;">A menswear narrative guided by a curiosity to intertwine nuanced perspectives with an essence of familiarity.</p>
-            <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
-              <p style="font-size: 12px; color: #999; letter-spacing: 0.1em;">© 2025 MIXED SIGNALS — ALL FREQUENCIES RESERVED</p>
-            </div>
-          </div>
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Welcome to Mixed Signals</title>
+          </head>
+          <body style="margin: 0; padding: 0; background-color: #f7f7f7; font-family: 'Times New Roman', Times, serif;">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f7f7f7">
+              <tr>
+                <td align="center" style="padding: 40px 10px;">
+                  <table width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="max-width: 600px; width: 100%; border: 1px solid #eaeaeb;">
+                    <!-- Header -->
+                    <tr>
+                      <td align="center" style="padding: 50px 40px 30px 40px; border-bottom: 1px solid #f0f0f0;">
+                        <h1 style="margin: 0; font-size: 28px; font-weight: 400; letter-spacing: 0.25em; text-transform: uppercase; color: #111111;">Mixed Signals</h1>
+                        <p style="margin: 10px 0 0 0; font-size: 11px; letter-spacing: 0.15em; color: #666666; text-transform: uppercase;">SS — 25 | Liverpool</p>
+                      </td>
+                    </tr>
+                    <!-- Hero Area -->
+                    <tr>
+                      <td align="center" style="padding: 60px 40px;">
+                        <h2 style="margin: 0 0 20px 0; font-size: 22px; font-weight: 400; color: #111111; font-style: italic;">Thank you for registering your interest.</h2>
+                        <div style="width: 40px; height: 1px; background-color: #111111; margin: 0 auto 30px auto;"></div>
+                        <p style="margin: 0; font-size: 15px; line-height: 1.8; color: #444444; text-align: center;">
+                          A menswear narrative guided by a curiosity to intertwine nuanced perspectives with an essence of familiarity. We are thrilled to welcome you to our inner circle.
+                        </p>
+                        <br>
+                        <p style="margin: 0; font-size: 15px; line-height: 1.8; color: #444444; text-align: center;">
+                          You will be the first to know about our upcoming collections, exclusive previews, and editorial pieces. 
+                        </p>
+                      </td>
+                    </tr>
+                    <!-- Footer -->
+                    <tr>
+                      <td align="center" bgcolor="#111111" style="padding: 40px;">
+                        <p style="margin: 0 0 15px 0; font-size: 16px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: #ffffff;">Mixed Signals</p>
+                        <p style="margin: 0 0 20px 0; font-size: 12px; color: #888888; text-transform: uppercase; letter-spacing: 0.1em;">
+                          <a href="mailto:info@mixed-signals.co" style="color: #bbbbbb; text-decoration: none;">info@mixed-signals.co</a>
+                        </p>
+                        <div style="width: 100%; border-top: 1px solid #333333; margin: 20px 0;"></div>
+                        <p style="margin: 0; font-size: 10px; color: #666666; letter-spacing: 0.1em; text-transform: uppercase;">
+                          &copy; 2026 MIXED SIGNALS &mdash; ALL FREQUENCIES RESERVED
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </body>
+          </html>
         `
       })
     } catch (e: any) {

@@ -58,6 +58,12 @@ export default function LandingSection({ landingRef }: LandingSectionProps) {
         }, 
         "-=0.4"
       )
+    } else if (status === 'error') {
+      // Premium Error Reveal
+      gsap.fromTo(".status-message", 
+        { opacity: 0, y: 10 }, 
+        { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
+      )
     }
   }, [status])
 
@@ -147,14 +153,15 @@ export default function LandingSection({ landingRef }: LandingSectionProps) {
         </form>
 
         {message && (
-          <p className={`status-message fade-up ${status}`} style={{ 
+          <p className={`status-message ${status}`} style={{ 
             fontFamily: 'var(--font-cormorant)',
             marginTop: '1.5rem',
             textAlign: 'center',
-            fontSize: status === 'success' ? '14px' : '12px',
-            letterSpacing: status === 'success' ? '0.3em' : '0.15em',
+            fontSize: status === 'success' ? '14px' : '15px',
+            letterSpacing: status === 'success' ? '0.3em' : '0.1em',
             color: status === 'error' ? '#ff4444' : '#000000',
-            fontWeight: status === 'success' ? 500 : 400
+            fontWeight: status === 'success' ? 500 : 700,
+            lineHeight: '1.4'
           }}>
             {message}
           </p>

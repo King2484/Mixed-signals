@@ -69,7 +69,7 @@ export default function Loader({ refs, loaderRef }: LoaderProps) {
       >
         <img
           id="img-a"
-          src="/m1xedsignals-20260310-0003.jpg"
+          src="/_MG_1367.jpg.jpeg"
           alt=""
           ref={(el) => { if (refs.current) refs.current.imgAEl = el }}
         />
@@ -83,7 +83,7 @@ export default function Loader({ refs, loaderRef }: LoaderProps) {
       >
         <img
           id="img-b"
-          src="/m1xedsignals-20260310-0001.jpg"
+          src="/_MG_1361.jpg.jpeg"
           alt=""
           ref={(el) => { if (refs.current) refs.current.imgBEl = el }}
         />
@@ -97,7 +97,7 @@ export default function Loader({ refs, loaderRef }: LoaderProps) {
       >
         <img
           id="img-c"
-          src="/m1xedsignals-20260310-0002.jpg"
+          src="/_MG_1259.jpg.jpeg"
           alt=""
           ref={(el) => { if (refs.current) refs.current.imgCEl = el }}
         />
@@ -111,7 +111,7 @@ export default function Loader({ refs, loaderRef }: LoaderProps) {
       >
         <img
           id="img-d"
-          src="/IMG-20260309-WA0006-opt.jpg"
+          src="/_MG_1255.jpg.jpeg"
           alt=""
           ref={(el) => { if (refs.current) refs.current.imgDEl = el }}
         />
