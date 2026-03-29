@@ -96,46 +96,46 @@ export async function registerInterest(formData: FormData) {
               @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:wght@300;400;500&display=swap');
             </style>
           </head>
-          <body style="margin: 0; padding: 0; background-color: #0a0a0a; font-family: 'Cormorant Garamond', 'Times New Roman', serif;">
-            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#0a0a0a">
+          <body style="margin: 0; padding: 0; background-color: #ffffff; font-family: 'Cormorant Garamond', 'Times New Roman', serif;">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
               <tr>
                 <td align="center" style="padding: 60px 15px;">
-                  <table width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="#111111" style="max-width: 600px; width: 100%; border: 1px solid #222222; border-radius: 4px; overflow: hidden;">
+                  <table width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="max-width: 600px; width: 100%; border: 1px solid #eeeeee; border-radius: 4px; overflow: hidden;">
                     <!-- Header -->
                     <tr>
-                      <td align="center" style="padding: 60px 40px 40px 40px; border-bottom: 1px solid #222222;">
-                        <img src="https://mixedsignalss.com/preview-transparent.png" alt="Mixed Signals Logo" style="width: 80px; height: auto; margin-bottom: 20px; display: block;" onerror="this.style.display='none'" />
-                        <h1 style="margin: 0; font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; color: #ffffff;">Mixed Signals</h1>
-                        <p style="margin: 15px 0 0 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.2em; color: #888888; text-transform: uppercase;">SS — 26 | Liverpool</p>
+                      <td align="center" style="padding: 60px 40px 40px 40px; border-bottom: 1px solid #eeeeee;">
+                        <img src="https://mixedsignalss.com/preview-transparent.png" alt="Mixed Signals Logo" style="width: 80px; height: auto; margin-bottom: 20px; display: block; filter: invert(1); -webkit-filter: invert(1);" onerror="this.style.display='none'" />
+                        <h1 style="margin: 0; font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; color: #000000;">Mixed Signals</h1>
+                        <p style="margin: 15px 0 0 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.2em; color: #666666; text-transform: uppercase;">SS — 26 | Liverpool</p>
                       </td>
                     </tr>
                     <!-- Feature Image -->
                     <tr>
-                      <td align="center" style="padding: 0; background-color: #111111; line-height: 0;">
+                      <td align="center" style="padding: 0; background-color: #ffffff; line-height: 0;">
                         <img src="https://mixedsignalss.com/_MG_1361.jpg.jpeg" alt="Mixed Signals Collection" style="width: 100%; max-width: 600px; height: auto; display: block; border: 0; outline: none; margin: 0; padding: 0;" />
                       </td>
                     </tr>
                     <!-- Hero Area -->
                     <tr>
                       <td align="center" style="padding: 60px 50px;">
-                        <h2 style="margin: 0 0 25px 0; font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; color: #ffffff; font-style: italic;">Thank you for registering your interest.</h2>
-                        <div style="width: 30px; height: 1px; background-color: #444444; margin: 0 auto 30px auto;"></div>
-                        <p style="margin: 0 0 20px 0; font-size: 16px; line-height: 1.8; color: #bbbbbb; text-align: center; text-transform: uppercase;">
+                        <h2 style="margin: 0 0 25px 0; font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; color: #000000; font-style: italic;">Thank you for registering your interest.</h2>
+                        <div style="width: 30px; height: 1px; background-color: #dddddd; margin: 0 auto 30px auto;"></div>
+                        <p style="margin: 0 0 20px 0; font-size: 16px; line-height: 1.8; color: #333333; text-align: center; text-transform: uppercase;">
                           FOR THE ONES WHO FEEL DEEPLY, THINK DIFFERENTLY AND MOVE BETWEEN WORLDS WITHOUT VALIDATION.
                         </p>
-                        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: #bbbbbb; text-align: center;">
+                        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: #333333; text-align: center;">
                           You will be the first to know about our upcoming collections, exclusive previews, and editorial pieces. 
                         </p>
                       </td>
                     </tr>
                     <!-- Footer -->
                     <tr>
-                      <td align="center" bgcolor="#080808" style="padding: 40px;">
-                        <p style="margin: 0 0 15px 0; font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: #666666;">Mixed Signals</p>
-                        <p style="margin: 0 0 20px 0; font-size: 12px; font-family: 'Cormorant Garamond', serif; color: #555555; text-transform: uppercase; letter-spacing: 0.1em;">
-                          <a href="mailto:info@mixedsignalss.com" style="color: #888888; text-decoration: none;">info@mixedsignalss.com</a>
+                      <td align="center" bgcolor="#fafafa" style="padding: 40px; border-top: 1px solid #eeeeee;">
+                        <p style="margin: 0 0 15px 0; font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: #333333;">Mixed Signals</p>
+                        <p style="margin: 0 0 20px 0; font-size: 12px; font-family: 'Cormorant Garamond', serif; color: #666666; text-transform: uppercase; letter-spacing: 0.1em;">
+                          <a href="mailto:info@mixedsignalss.com" style="color: #666666; text-decoration: none;">info@mixedsignalss.com</a>
                         </p>
-                        <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 10px; color: #444444; letter-spacing: 0.1em; text-transform: uppercase;">
+                        <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 10px; color: #999999; letter-spacing: 0.1em; text-transform: uppercase;">
                           &copy; 2026 MIXED SIGNALS &mdash; ALL FREQUENCIES RESERVED
                         </p>
                       </td>
