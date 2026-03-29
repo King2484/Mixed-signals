@@ -43,14 +43,13 @@ export async function registerInterest(formData: FormData) {
     }
 
     const resend = new Resend(apiKey)
-    const FROM_EMAIL = 'Mixed Signals <onboarding@resend.dev>'
+    const FROM_EMAIL = 'Mixed Signals <info@mixedsignalss.com>'
     
     // Team Notification List
     const recipients = [
-      'ushiedaniel2484@gmail.com',
-      'daniel@mixed-signals.co',
-      'derrick.amankwah@mixed-signals.co',
-      'richmond.ojo@mixed-signals.co'
+      'derrick.amankwah@mixedsignalss.com',
+      'daniel@mixedsignalss.com',
+      'ushiedaniel2484@gmail.com'
     ]
 
     // Concurrent Team Notifications (Fast & Isolated)
@@ -60,6 +59,11 @@ export async function registerInterest(formData: FormData) {
         to: recipient,
         subject: 'New Interest Registration',
         html: `<p>A new user has registered their interest: <strong>${email}</strong></p>`
+      }).then(response => {
+        if (response.error) {
+           console.error(`[Registration] Resend rejected notification for ${recipient}:`, response.error)
+        }
+        return response
       }).catch(err => {
         console.error(`[Registration] Failed to notify ${recipient}:`, err.message)
         return null
