@@ -21,7 +21,7 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   title: 'Mixed Signals',
-  description: 'A menswear narrative guided by a curiosity to intertwine nuanced perspectives with an essence of familiarity.',
+  description: 'FOR THE ONES WHO FEEL DEEPLY, THINK DIFFERENTLY AND MOVE BETWEEN WORLDS WITHOUT VALIDATION.',
   icons: {
     icon: '/favicon-white.png',
     apple: '/favicon-white.png',

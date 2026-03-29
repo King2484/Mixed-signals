@@ -92,42 +92,50 @@ export async function registerInterest(formData: FormData) {
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Welcome to Mixed Signals</title>
+            <style>
+              @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:wght@300;400;500&display=swap');
+            </style>
           </head>
-          <body style="margin: 0; padding: 0; background-color: #f7f7f7; font-family: 'Times New Roman', Times, serif;">
-            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f7f7f7">
+          <body style="margin: 0; padding: 0; background-color: #0a0a0a; font-family: 'Cormorant Garamond', 'Times New Roman', serif;">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#0a0a0a">
               <tr>
-                <td align="center" style="padding: 40px 10px;">
-                  <table width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="max-width: 600px; width: 100%; border: 1px solid #eaeaeb;">
+                <td align="center" style="padding: 60px 15px;">
+                  <table width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="#111111" style="max-width: 600px; width: 100%; border: 1px solid #222222; border-radius: 4px; overflow: hidden;">
                     <!-- Header -->
                     <tr>
-                      <td align="center" style="padding: 50px 40px 30px 40px; border-bottom: 1px solid #f0f0f0;">
-                        <h1 style="margin: 0; font-size: 28px; font-weight: 400; letter-spacing: 0.25em; text-transform: uppercase; color: #111111;">Mixed Signals</h1>
-                        <p style="margin: 10px 0 0 0; font-size: 11px; letter-spacing: 0.15em; color: #666666; text-transform: uppercase;">SS — 25 | Liverpool</p>
+                      <td align="center" style="padding: 60px 40px 40px 40px; border-bottom: 1px solid #222222;">
+                        <img src="https://mixedsignalss.com/preview-transparent.png" alt="Mixed Signals Logo" style="width: 80px; height: auto; margin-bottom: 20px; display: block;" onerror="this.style.display='none'" />
+                        <h1 style="margin: 0; font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; color: #ffffff;">Mixed Signals</h1>
+                        <p style="margin: 15px 0 0 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.2em; color: #888888; text-transform: uppercase;">SS — 26 | Liverpool</p>
+                      </td>
+                    </tr>
+                    <!-- Feature Image -->
+                    <tr>
+                      <td align="center" style="padding: 0; background-color: #111111; line-height: 0;">
+                        <img src="https://mixedsignalss.com/_MG_1361.jpg.jpeg" alt="Mixed Signals Collection" style="width: 100%; max-width: 600px; height: auto; display: block; border: 0; outline: none; margin: 0; padding: 0;" />
                       </td>
                     </tr>
                     <!-- Hero Area -->
                     <tr>
-                      <td align="center" style="padding: 60px 40px;">
-                        <h2 style="margin: 0 0 20px 0; font-size: 22px; font-weight: 400; color: #111111; font-style: italic;">Thank you for registering your interest.</h2>
-                        <div style="width: 40px; height: 1px; background-color: #111111; margin: 0 auto 30px auto;"></div>
-                        <p style="margin: 0; font-size: 15px; line-height: 1.8; color: #444444; text-align: center;">
-                          A menswear narrative guided by a curiosity to intertwine nuanced perspectives with an essence of familiarity. We are thrilled to welcome you to our inner circle.
+                      <td align="center" style="padding: 60px 50px;">
+                        <h2 style="margin: 0 0 25px 0; font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; color: #ffffff; font-style: italic;">Thank you for registering your interest.</h2>
+                        <div style="width: 30px; height: 1px; background-color: #444444; margin: 0 auto 30px auto;"></div>
+                        <p style="margin: 0 0 20px 0; font-size: 16px; line-height: 1.8; color: #bbbbbb; text-align: center; text-transform: uppercase;">
+                          FOR THE ONES WHO FEEL DEEPLY, THINK DIFFERENTLY AND MOVE BETWEEN WORLDS WITHOUT VALIDATION.
                         </p>
-                        <br>
-                        <p style="margin: 0; font-size: 15px; line-height: 1.8; color: #444444; text-align: center;">
+                        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: #bbbbbb; text-align: center;">
                           You will be the first to know about our upcoming collections, exclusive previews, and editorial pieces. 
                         </p>
                       </td>
                     </tr>
                     <!-- Footer -->
                     <tr>
-                      <td align="center" bgcolor="#111111" style="padding: 40px;">
-                        <p style="margin: 0 0 15px 0; font-size: 16px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: #ffffff;">Mixed Signals</p>
-                        <p style="margin: 0 0 20px 0; font-size: 12px; color: #888888; text-transform: uppercase; letter-spacing: 0.1em;">
-                          <a href="mailto:info@mixed-signals.co" style="color: #bbbbbb; text-decoration: none;">info@mixed-signals.co</a>
+                      <td align="center" bgcolor="#080808" style="padding: 40px;">
+                        <p style="margin: 0 0 15px 0; font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: #666666;">Mixed Signals</p>
+                        <p style="margin: 0 0 20px 0; font-size: 12px; font-family: 'Cormorant Garamond', serif; color: #555555; text-transform: uppercase; letter-spacing: 0.1em;">
+                          <a href="mailto:info@mixedsignalss.com" style="color: #888888; text-decoration: none;">info@mixedsignalss.com</a>
                         </p>
-                        <div style="width: 100%; border-top: 1px solid #333333; margin: 20px 0;"></div>
-                        <p style="margin: 0; font-size: 10px; color: #666666; letter-spacing: 0.1em; text-transform: uppercase;">
+                        <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 10px; color: #444444; letter-spacing: 0.1em; text-transform: uppercase;">
                           &copy; 2026 MIXED SIGNALS &mdash; ALL FREQUENCIES RESERVED
                         </p>
                       </td>
@@ -139,6 +147,11 @@ export async function registerInterest(formData: FormData) {
           </body>
           </html>
         `
+      }).then(response => {
+        if (response.error) {
+          console.error(`[Registration] Resend rejected confirmation for user ${email}:`, response.error)
+        }
+        return response
       })
     } catch (e: any) {
       console.warn(`[Registration] User confirmation suppressed (Sandbox/API limit):`, e.message)

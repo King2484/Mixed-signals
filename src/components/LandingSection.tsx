@@ -183,7 +183,7 @@ export default function LandingSection({ landingRef }: LandingSectionProps) {
           Mixed Signals
         </span>
         <span className="footer-copy" style={{ fontFamily: 'var(--font-cormorant)' }}>
-          © 2025 — All frequencies reserved
+          © 2026 — All frequencies reserved
         </span>
       </footer>
 

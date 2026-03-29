@@ -42,7 +42,7 @@ export default function VideoHero({
           Mixed Signals
         </span>
         <span className="hero-season" style={{ fontFamily: 'var(--font-cormorant)' }}>
-          SS 2025
+          SS 2026
         </span>
       </div>
 
