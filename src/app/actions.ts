@@ -103,10 +103,10 @@ export async function registerInterest(formData: FormData) {
                   <table width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="max-width: 600px; width: 100%; border: 1px solid #eeeeee; border-radius: 4px; overflow: hidden;">
                     <!-- Header -->
                     <tr>
-                      <td align="center" style="padding: 60px 40px 40px 40px; border-bottom: 1px solid #eeeeee;">
-                        <img src="https://mixedsignalss.com/preview-transparent.png" alt="Mixed Signals Logo" style="width: 80px; height: auto; margin-bottom: 20px; display: block; filter: invert(1); -webkit-filter: invert(1);" onerror="this.style.display='none'" />
-                        <h1 style="margin: 0; font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; color: #000000;">Mixed Signals</h1>
-                        <p style="margin: 15px 0 0 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.2em; color: #666666; text-transform: uppercase;">SS — 26 | Liverpool</p>
+                      <td align="center" bgcolor="#0a0a0a" style="padding: 60px 40px 40px 40px;">
+                        <img src="https://mixedsignalss.com/preview-transparent.png" alt="Mixed Signals Logo" style="width: 80px; height: auto; margin-bottom: 20px; display: block;" onerror="this.style.display='none'" />
+                        <h1 style="margin: 0; font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; color: #ffffff;">Mixed Signals</h1>
+                        <p style="margin: 15px 0 0 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.2em; color: #888888; text-transform: uppercase;">SS — 26 | Liverpool</p>
                       </td>
                     </tr>
                     <!-- Feature Image -->
